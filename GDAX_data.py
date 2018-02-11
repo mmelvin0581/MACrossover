@@ -11,6 +11,7 @@ cryptocurrency along with a short and long moving average will be produced. That
 will have 'buy/sell' signals on it where the moving averages cross, hints the name moving
 average crossover. Using this strategy, we will generate a mock portfolio and make
 mock trades based on the 'buy/sell' signals produced, and see if we made or lost money.
+A graph of the portfolios value in USD along with the buy/sell signals is produced.
 """
 
 import matplotlib.pyplot as plt
@@ -20,7 +21,10 @@ import datetime as dt
 
 # TODO: Fix the x-axis to show the dates
 def visualize_portfolio(port):
-    """Plots the portfolio value in USD along with the buy/sell signals."""
+    """Plots the portfolio value in USD along with the buy/sell signals.
+    :param port: portfolio DataFrame
+    :type port: pandas.DataFrame
+    """
 
     # Create a figure
     fig = plt.figure()
