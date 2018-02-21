@@ -51,8 +51,8 @@ if __name__ == '__main__':
     cryptoList = ['BTC-USD', 'ETH-USD', 'LTC-USD']
     granularity = 24 * 3600  # time in seconds of date index
     # TODO: Call this function prior to the presentation to update the data
-    # get_data_to_csv(cryptoList, granularity,
-    #                  start=dt.datetime(2017, 1, 1), end=dt.datetime.today())
+    get_data_to_csv(cryptoList, granularity,
+                     start=dt.datetime(2017, 1, 1), end=dt.datetime.today())
 
     # Prompt for cryptocurrency to buy
     while True:
