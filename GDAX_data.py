@@ -50,8 +50,11 @@ if __name__ == '__main__':
     # The Crypto Currencies available on Coinbase/GDAX
     cryptoList = ['BTC-USD', 'ETH-USD', 'LTC-USD']
     granularity = 24 * 3600  # time in seconds of date index
+
+    # Initialize Utility class
+    do_utilities = Utility.Utility()
     # TODO: Call this function prior to the presentation to update the data
-    get_data_to_csv(cryptoList, granularity,
+    do_utilities.get_data_to_csv(cryptoList, granularity,
                      start=dt.datetime(2017, 1, 1), end=dt.datetime.today())
 
     # Prompt for cryptocurrency to buy
@@ -77,9 +80,6 @@ if __name__ == '__main__':
 
             # Prompt for buy sell amount
             buy_sell = input('How many coins would you buy/sell at a time? ')
-
-            # Initialize Utility class
-            do_utilities = Utility.Utility()
 
             # This is where the ValueError may occur. The 'window' must be an integer.
             signals = do_utilities.generate_signal(cryptoList[selection - 1], short, long_)
